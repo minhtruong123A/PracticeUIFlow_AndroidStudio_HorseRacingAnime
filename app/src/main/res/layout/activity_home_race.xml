@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/anime_background"
+    android:padding="16dp">
+
+    <!-- Money and Home UI components -->
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiền hiện có: 1000"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:id="@+id/spinner_horses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_money"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/et_bet_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số tiền cược"
+        android:layout_below="@id/spinner_horses"
+        android:layout_centerHorizontal="true"
+        android:inputType="number" />
+
+    <!-- Horse seekbars -->
+    <SeekBar
+        android:id="@+id/sb_horse1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0"
+        android:layout_below="@id/et_bet_money"
+        android:layout_marginTop="20dp"
+        android:thumb="@drawable/meoww"/>
+
+    <SeekBar
+        android:id="@+id/sb_horse2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0"
+        android:layout_below="@id/sb_horse1"
+        android:layout_marginTop="10dp"
+        android:thumb="@drawable/meoww"/>
+
+    <SeekBar
+        android:id="@+id/sb_horse3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0"
+        android:layout_below="@id/sb_horse2"
+        android:layout_marginTop="10dp"
+        android:thumb="@drawable/meoww"/>
+
+    <SeekBar
+        android:id="@+id/sb_horse4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="0"
+        android:layout_below="@id/sb_horse3"
+        android:layout_marginTop="10dp"
+        android:thumb="@drawable/meoww"/>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bắt đầu đua"
+        android:layout_below="@id/sb_horse4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tv_race_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Kết quả đua sẽ hiển thị tại đây"
+        android:layout_below="@id/btn_start"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Buttons for navigation and reset -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tv_race_result"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btn_deposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nạp tiền"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hướng dẫn"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:layout_weight="1" />
+    </LinearLayout>
+</RelativeLayout>
